@@ -27,6 +27,10 @@ function App() {
     setBoard(nextBoard);
     setXIsNext((prev) => !prev);
   }
+  function restartGame() {
+    setBoard(EMPTY_BOARD);
+    setXIsNext(true);
+  }
 
   return (
     <div className="page">
@@ -36,7 +40,10 @@ function App() {
         <div className="status" aria-live="polite">
           {status}
         </div>
-        <Board board={board} onCellClick={handleCellClick} winningLine={line} />
+          <Board board={board} onCellClick={handleCellClick} winningLine={line} />
+          <button className="restart" onClick={restartGame}>
+            Restart Game
+          </button>
       </div>
     </div>
   );

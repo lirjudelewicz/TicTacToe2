@@ -60,3 +60,16 @@
 }
 
 .cell:hover { background: var(--cellHover); transform: translateY(-1px); }
+
+.restart {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.08);
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.restart:hover { background: rgba(255,255,255,0.12); }
